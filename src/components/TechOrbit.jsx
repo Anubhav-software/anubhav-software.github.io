@@ -32,20 +32,21 @@ import { profile } from '../data/profile';
 // ── Tech logos in the orbit (positions are % of the container).
 //    Adjust `top`/`left` to re-arrange; `delay` staggers the float animation.
 const techs = [
-  { name: 'React',      Icon: SiReact,        top: '4%',  left: '50%', delay: 0.0 },
-  { name: 'TypeScript', Icon: SiTypescript,   top: '18%', left: '84%', delay: 0.3 },
-  { name: 'Node.js',    Icon: SiNodedotjs,    top: '50%', left: '94%', delay: 0.6 },
-  { name: 'PostgreSQL', Icon: SiPostgresql,   top: '82%', left: '84%', delay: 0.9 },
-  { name: 'Docker',     Icon: SiDocker,       top: '96%', left: '50%', delay: 1.2 },
-  { name: 'MongoDB',    Icon: SiMongodb,      top: '82%', left: '16%', delay: 0.45 },
-  { name: 'Next.js',    Icon: SiNextdotjs,    top: '50%', left: '4%',  delay: 0.75 },
-  { name: 'Tailwind',   Icon: SiTailwindcss,  top: '18%', left: '16%', delay: 1.05 },
+  { name: 'React',      Icon: SiReact,        color: '#61DAFB', top: '4%',  left: '50%', delay: 0.0 },
+  { name: 'TypeScript', Icon: SiTypescript,   color: '#3178C6', top: '18%', left: '84%', delay: 0.3 },
+  { name: 'Node.js',    Icon: SiNodedotjs,    color: '#339933', top: '50%', left: '94%', delay: 0.6 },
+  { name: 'PostgreSQL', Icon: SiPostgresql,   color: '#4169E1', top: '82%', left: '84%', delay: 0.9 },
+  { name: 'Docker',     Icon: SiDocker,       color: '#2496ED', top: '96%', left: '50%', delay: 1.2 },
+  { name: 'MongoDB',    Icon: SiMongodb,      color: '#47A248', top: '82%', left: '16%', delay: 0.45 },
+  // Next.js logomark is black/white — leave it inheriting so it shows in both themes
+  { name: 'Next.js',    Icon: SiNextdotjs,                       top: '50%', left: '4%',  delay: 0.75 },
+  { name: 'Tailwind',   Icon: SiTailwindcss,  color: '#06B6D4', top: '18%', left: '16%', delay: 1.05 },
   // A couple of "near" chips that sit closer to the core for depth
-  { name: 'Redis',      Icon: SiRedis,        top: '30%', left: '72%', delay: 0.15, near: true },
-  { name: 'NestJS',     Icon: SiNestjs,       top: '70%', left: '28%', delay: 0.55, near: true },
+  { name: 'Redis',      Icon: SiRedis,        color: '#DC382D', top: '30%', left: '72%', delay: 0.15, near: true },
+  { name: 'NestJS',     Icon: SiNestjs,       color: '#E0234E', top: '70%', left: '28%', delay: 0.55, near: true },
 ];
 
-function TechChip({ name, Icon, top, left, delay, near }) {
+function TechChip({ name, Icon, color, top, left, delay, near }) {
   return (
     // Outer: absolute positioning + center-on-point. No motion here.
     <div
@@ -79,7 +80,12 @@ function TechChip({ name, Icon, top, left, delay, near }) {
             <Icon
               size={near ? 22 : 26}
               aria-hidden="true"
-              className="text-neutral-700 transition-colors duration-300 group-hover/chip:text-accent-600 dark:text-neutral-300 dark:group-hover/chip:text-accent-300"
+              style={color ? { color } : undefined}
+              className={
+                color
+                  ? 'transition-transform duration-300 group-hover/chip:scale-110'
+                  : 'text-neutral-700 transition-colors duration-300 group-hover/chip:text-accent-600 dark:text-neutral-300 dark:group-hover/chip:text-accent-300'
+              }
             />
           </div>
           {/* Tooltip-style label, appears on hover */}
