@@ -110,7 +110,7 @@
   }
 
   .chip {
-    @apply inline-flex items-center rounded-md border border-subtle
+    @apply inline-flex items-center gap-1.5 rounded-md border border-subtle
       bg-neutral-100/60 px-2.5 py-1 text-xs font-medium
       text-neutral-700 dark:bg-white/[0.03] dark:text-neutral-300;
   }

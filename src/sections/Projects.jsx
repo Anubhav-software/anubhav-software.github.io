@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
+import TechIcon from '../components/TechIcon';
 import { projects } from '../data/profile';
 
 /**
@@ -54,7 +55,10 @@ function ProjectCard({ project, index }) {
       <ul className="relative mt-6 flex flex-wrap gap-1.5">
         {project.tech.map((t) => (
           <li key={t}>
-            <span className="chip">{t}</span>
+            <span className="chip">
+              <TechIcon name={t} size={12} />
+              {t}
+            </span>
           </li>
         ))}
       </ul>

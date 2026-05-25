@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading';
+import TechIcon from '../components/TechIcon';
 import { skillGroups } from '../data/profile';
 
 /**
@@ -32,6 +33,7 @@ export default function Skills() {
                 {group.items.map((item) => (
                   <li key={item}>
                     <span className="chip transition-all duration-200 hover:border-accent-500/50 hover:bg-accent-500/5 hover:text-accent-700 dark:hover:text-accent-300">
+                      <TechIcon name={item} size={13} />
                       {item}
                     </span>
                   </li>
