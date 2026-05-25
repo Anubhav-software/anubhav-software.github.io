@@ -21,12 +21,13 @@
     <meta property="og:type" content="website" />
 
     <!-- Prevent FOUC for theme — read preference before paint.
-         Default is LIGHT; users can toggle to dark from the navbar (persists in localStorage). -->
+         First visit: dark on mobile (<768px), light on desktop.
+         Toggling from the navbar persists the user's choice in localStorage. -->
     <script>
       (function () {
         try {
           var stored = localStorage.getItem('theme');
-          var useDark = stored ? stored === 'dark' : false; // light by default
+          var useDark = stored ? stored === 'dark' : window.innerWidth < 768;
           document.documentElement.classList.toggle('dark', useDark);
         } catch (e) {}
       })();

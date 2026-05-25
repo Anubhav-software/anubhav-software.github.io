@@ -2,10 +2,9 @@ import { useCallback, useEffect, useState } from 'react';
 
 /**
  * useTheme — manages 'light' | 'dark' theme with localStorage persistence.
- * Dark mode is the default for first-time visitors.
- *
- * NOTE: the initial class is set inline in index.html (pre-paint) to avoid
- * a flash of the wrong theme. This hook syncs React state with that.
+ * First-visit default is picked by viewport in index.html: dark on mobile
+ * (<768px), light on desktop. This hook just syncs React state with the
+ * class the pre-paint script already set on <html>.
  */
 export function useTheme() {
   const [theme, setTheme] = useState(() => {
