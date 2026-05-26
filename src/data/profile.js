@@ -19,7 +19,7 @@ export const profile = {
 
   // ───── External Links ─────
   links: {
-    resume: '#',     // TODO: replace with resume URL (PDF or Google Doc share link)
+    resume: './assets/Anubhav_new_CV.docx',
     linkedin: 'https://linkedin.com/in/anubhav-rawat',
     github: 'https://github.com/anubhavrawat',
     leetcode: 'https://leetcode.com/anubhavrawat',
@@ -87,8 +87,8 @@ export const projects = [
     summary:
       'Enterprise Resource Planning system managing 15,000+ products with POS billing, vendor management, expense tracking, analytics dashboards, and asset management. Features an AI chatbot powered by LLaMA with function-calling tools and a RAG pipeline.',
     tech: ['React.js', 'Node.js', 'NestJS', 'PostgreSQL', 'LLaMA', 'RAG', 'Redis', 'Docker'],
-    demo: '#',
-    repo: '#',
+    demo: 'https://thepanipathandloom.com/',
+    repo: 'https://github.com/Anubhav-software/erp-dashboard',
     highlight: '15,000+ products',
   },
   {
@@ -96,17 +96,17 @@ export const projects = [
     summary:
       'WhatsApp marketing & campaign platform with bulk contact/media upload, audience segmentation, campaign automation on targeted segments, and a WhatsApp template builder. Uses BullMQ + Redis for reliable high-volume message dispatch.',
     tech: ['Next.js', 'NestJS', 'TypeScript', 'Prisma', 'PostgreSQL', 'BullMQ', 'Redis'],
-    demo: '#',
-    repo: '#',
+    demo: 'https://app.msgbuddy.com/',
+    repo: 'https://github.com/Anubhav-software/whatsapp-saas',
     highlight: 'High-volume dispatch',
   },
   {
-    name: 'BNI Buddy',
+    name: 'BNI (Business Network International)',
     summary:
       'Business networking platform serving 1,000+ members with role-based access (Regional Admins, Chapter Admins, Members), payment gateway integration, and auto-generated invoices.',
     tech: ['React.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Docker', 'Redis'],
-    demo: '#',
-    repo: '#',
+    demo: 'https://bninewdelhi.com/',
+    repo: 'https://github.com/Anubhav-software/bni-react-frontend',
     highlight: '1,000+ members',
   },
   {
@@ -114,8 +114,8 @@ export const projects = [
     summary:
       'A fully dynamic LMS + CMS astrology platform with secure HLS-based video streaming — classes uploaded as encrypted HLS chunks to prevent unauthorized downloads. Generates Kundli and Panchang via the Swiss Ephemeris library, paired with a dynamic CMS that lets non-technical users edit services, blogs, and site content without code changes.',
     tech: ['React.js', 'Node.js', 'Swiss Ephemeris', 'HLS', 'PostgreSQL'],
-    demo: '#',
-    repo: '#',
+    demo: 'https://cosmoriyaastrology.com/',
+    repo: 'https://github.com/Anubhav-software/astro-frontend',
     highlight: 'Encrypted streaming',
   },
 ];

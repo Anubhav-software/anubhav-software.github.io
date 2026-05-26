@@ -95,11 +95,9 @@ export default function Hero() {
             <FolderGit2 size={16} strokeWidth={2} aria-hidden="true" />
             View Projects
           </a>
-          {/* TODO: replace href with resume URL in src/data/profile.js */}
           <a
             href={profile.links.resume}
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Anubhav-Rawat-Resume.docx"
             className="btn-secondary"
           >
             <Download size={16} strokeWidth={2} aria-hidden="true" />
